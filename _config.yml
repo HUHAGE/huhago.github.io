@@ -113,7 +113,7 @@ analytics:
 # 站点作者
 author:
   name             : "HUHA"
-  avatar           : "/assets/images/huha-avatar.jpg"
+  avatar           : "/assets/images/huha-avatar.png"
   bio              : "热爱生活，热爱编程"
   location         : "四川 - 成都"
   #email            : "wsyhok@126.com"

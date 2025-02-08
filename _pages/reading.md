@@ -4,7 +4,7 @@ layout: collection
 permalink: /reading/
 collection: reading
 entries_layout: grid
-classes: wide
+classes: wide centered
 author_profile: true
 sort_by: date
 sort_order: reverse

@@ -294,6 +294,24 @@ defaults:
       comments: true
       share: true
       related: true
+      classes: wide
+      show_date: true
+      toc_sticky: true
+      # 添加以下设置使内容居中
+      classes: wide centered
+  
+  # _reading
+  - scope:
+      path: ""
+      type: reading
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      related: true
+      classes: wide centered
+      show_date: true
+      toc_sticky: true
 
 # 添加或修改以下配置
 future: true  # 允许发布未来日期的文章
@@ -311,16 +329,4 @@ collections:
   reading:
     output: true
     permalink: /:collection/:path/
-
-# Defaults for collections
-defaults:
-  # _reading
-  - scope:
-      path: ""
-      type: reading
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      related: true
 

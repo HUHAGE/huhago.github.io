@@ -12,6 +12,7 @@ tags:
   - 标签2
 toc: true
 toc_sticky: true
+classes: wide centered
 gallery:
   - url: /assets/images/unsplash-gallery-image-1.jpg
     image_path: /assets/images/unsplash-gallery-image-1-th.jpg

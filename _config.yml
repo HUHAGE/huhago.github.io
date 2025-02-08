@@ -22,9 +22,9 @@ title_separator          : "-"
 subtitle                 : "一间简陋的草房，住着一颗不安的心。" # 显示在网站标题下方的标语
 name                     : "HUHA"
 description              : "一间简陋的草房，住着一颗不安的心。"
-url                      : # 你的网站基础主机名和协议，例如 "https://mmistakes.github.io"
-baseurl                  : # 你的网站子路径，例如 "/blog"
-repository               : # GitHub 用户名/仓库名，例如 "mmistakes/minimal-mistakes"
+url                      : "https://github.com/HUHAGE/huhago.github.io" # 你的网站基础主机名和协议，例如 "https://mmistakes.github.io"
+baseurl                  : "" # 你的网站子路径，例如 "/blog"
+repository               : "HUHAGE/huhago.github.io" # GitHub 用户名/仓库名，例如 "mmistakes/minimal-mistakes"
 teaser                   : # 默认预览图片路径，例如 "/assets/images/500x300.png"
 logo                     : "/assets/images/logo.png"
 masthead_title           : # 覆盖显示在页眉的网站标题，使用 " " 则不显示标题

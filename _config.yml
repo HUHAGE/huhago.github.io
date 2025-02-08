@@ -114,7 +114,11 @@ analytics:
 author:
   name             : "HUHA"
   avatar           : "/assets/images/huha-avatar.png"
+<<<<<<< HEAD
   bio              : "热爱生活，热爱编程"
+=======
+  bio              : "江湖迷途小书童，小小凡人。"
+>>>>>>> parent of c09a5bd2 (AI协助完成优化。)
   location         : "四川 - 成都"
   #email            : "wsyhok@126.com"
   links:
@@ -123,10 +127,23 @@ author:
       url: "mailto:wsyhok@126.com"
     - label: "CSDN"
       icon: "fas fa-fw fa-link"
+<<<<<<< HEAD
       url: "https://blog.csdn.net/wsyhok"
     - label: "Gitee"
       icon: "fab fa-fw fa-github"
       url: "https://gitee.com/huhage"
+=======
+      url: "https://blog.csdn.net/wsyhok?type=blog"
+    - label: "Gitee"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://gitee.com/huhage"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      # url: "https://github.com/"
+>>>>>>> parent of c09a5bd2 (AI协助完成优化。)
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -316,6 +333,7 @@ defaults:
 # 添加或修改以下配置
 future: true  # 允许发布未来日期的文章
 
+<<<<<<< HEAD
 # 添加社交分享按钮
 social_share: true
 social_share_items:
@@ -330,3 +348,5 @@ collections:
     output: true
     permalink: /:collection/:path/
 
+=======
+>>>>>>> parent of c09a5bd2 (AI协助完成优化。)

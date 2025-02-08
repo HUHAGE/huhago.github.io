@@ -10,12 +10,12 @@
 # 查看文档以确定你应该使用 `theme` 还是 `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
+theme: minimal-mistakes-jekyll  # 或者使用 remote_theme
+remote_theme: mmistakes/minimal-mistakes@4.24.0  # 如果使用远程主题
 minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # 网站设置
-locale                   : "zh-CHS"
+locale                   : "zh-CN"
 rtl                      : # true, false (默认) # 将页面方向改为从右到左，用于RTL语言
 title                    : "HUHA的茅屋"
 title_separator          : "-"
@@ -161,7 +161,6 @@ footer:
 
 # 读取文件
 include:
-  - .htaccess
   - _pages
 exclude:
   - "*.sublime-project"
@@ -298,7 +297,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
 

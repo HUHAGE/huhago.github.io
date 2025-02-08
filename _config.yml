@@ -105,10 +105,10 @@ social:
 
 # 分析统计
 analytics:
-  provider               : # false (默认), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google" # false (默认), "google", "google-universal", "google-gtag", "custom"
   google:
     tracking_id          :
-    anonymize_ip         : # true, false (默认)
+    anonymize_ip         : true # true, false (默认)
 
 # 站点作者
 author:
@@ -124,9 +124,9 @@ author:
     - label: "CSDN"
       icon: "fas fa-fw fa-link"
       url: "https://blog.csdn.net/wsyhok"
-    - label: "GitHub"
+    - label: "Gitee"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/HUHAGE"
+      url: "https://gitee.com/huhage"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -305,4 +305,22 @@ social_share_items:
   - "facebook"
   - "linkedin"
   - "weibo"
+
+# Collections
+collections:
+  reading:
+    output: true
+    permalink: /:collection/:path/
+
+# Defaults for collections
+defaults:
+  # _reading
+  - scope:
+      path: ""
+      type: reading
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      related: true
 

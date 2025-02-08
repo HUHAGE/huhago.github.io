@@ -4,8 +4,9 @@
 
 #main {
   @include clearfix;
-  margin-inline: auto;
-  padding-inline: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   max-width: 100%;
@@ -35,20 +36,21 @@ body {
 
 .page {
   @include breakpoint($large) {
-    float: inline-end;
+    float: right;
     width: calc(100% - #{$right-sidebar-width-narrow});
-    padding-inline-end: $right-sidebar-width-narrow;
+    padding-right: $right-sidebar-width-narrow;
   }
 
   @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
-    padding-inline-end: $right-sidebar-width;
+    padding-right: $right-sidebar-width;
   }
 
   .page__inner-wrap {
-    float: inline-start;
+    float: left;
     margin-top: 1em;
-    margin-inline: 0;
+    margin-left: 0;
+    margin-right: 0;
     width: 100%;
     clear: both;
 
@@ -56,8 +58,9 @@ body {
     .page__meta,
     .page__share {
       position: relative;
-      float: inline-start;
-      margin-inline: 0;
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
       width: 100%;
       clear: both;
     }
@@ -565,29 +568,73 @@ body {
    ========================================================================== */
 
 .centered {
+  .page {
+    float: none;
+    margin: 0 auto;
+    padding: 0 1em;
+    
+    @include breakpoint($large) {
+      width: 100%;
+      padding-right: 0;
+    }
+
+    @include breakpoint($x-large) {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+
+  .page__inner-wrap {
+    max-width: $medium;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+  }
+
   .page__content {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 100%;
+    padding: 0;
+    
+    @include breakpoint($large) {
+      width: 100%;
+      padding: 0;
+    }
   }
-  
+
   .page__meta {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .page__title {
-    max-width: 1024px;
-    margin: 20px auto;
-    padding: 0 20px;
+    width: 100%;
     text-align: center;
   }
 
+  .page__title {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  /* 调整作者信息栏位置 */
+  .sidebar.sticky {
+    @include breakpoint($large) {
+      position: relative;
+      float: none;
+      width: 100%;
+      max-width: $medium;
+      margin: 0 auto 2em;
+      padding: 0;
+      
+      &.sticky {
+        top: 2em;
+      }
+    }
+  }
+
+  /* 调整相关文章部分 */
   .page__related {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 100%;
+    float: none;
+    max-width: $medium;
+    margin: 2em auto 0;
+    padding: 1em 0;
+    clear: both;
   }
 }
 
@@ -597,12 +644,12 @@ body {
 
 .page__content {
   h1, h2, h3, h4, h5, h6 {
-    margin-top: 2em;
-    margin-bottom: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
   }
 
   p {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.3em;
     line-height: 1.8;
   }
 
@@ -615,20 +662,23 @@ body {
   }
 
   blockquote {
-    margin: 2em 0;
-    padding: 1em 2em;
-    border-left: 5px solid #6f777d;
-    background-color: #f8f9fa;
-    
-    p {
-      margin: 0;
-      font-style: italic;
-    }
+    margin: 1.5em 0;
+    padding: 1em 1.5em;
+    border-left: 4px solid $primary-color;
+    background-color: mix($background-color, $primary-color, 95%);
+    font-style: italic;
   }
 
   ul, ol {
     margin-bottom: 1.5em;
-    padding-left: 2em;
+    padding-left: 1.5em;
+  }
+
+  pre {
+    margin: 1.5em 0;
+    padding: 1em;
+    background-color: $code-background-color;
+    border-radius: 4px;
   }
 }
 

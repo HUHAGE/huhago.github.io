@@ -74,7 +74,7 @@ There are three ways to install: as a [gem-based theme](https://jekyllrb.com/doc
 
 ### Gem-based method
 
-With Gem-based themes, directories such as the `assets`, `_layouts`, `_includes`, and `_sass` are stored in the theme’s gem, hidden from your immediate view. Yet all of the necessary directories will be read and processed during Jekyll’s build process.
+With Gem-based themes, directories such as the `assets`, `_layouts`, `_includes`, and `_sass` are stored in the theme's gem, hidden from your immediate view. Yet all of the necessary directories will be read and processed during Jekyll's build process.
 
 This allows for easier installation and updating as you don't have to manage any of the theme files. To install:
 
@@ -287,3 +287,139 @@ Lunr is distributed under the terms of the [MIT License](http://opensource.org/l
 Minimal Mistakes incorporates [clipboard.js](https://clipboardjs.com/),
 Copyright (c) 2021 Zeno Rocha.
 Clipboard.js is distributed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+
+---
+
+# HUHA的茅屋 - 个人博客
+
+这是一个基于 Jekyll 和 Minimal Mistakes 主题的个人博客网站。
+
+## 项目概述
+
+- 网站名称：HUHA的茅屋
+- 主题：Minimal Mistakes
+- 描述：一间简陋的草房，住着一颗不安的心
+
+## 快速开始
+
+### 1. 本地开发环境设置
+
+1. 确保已安装 Ruby 环境(推荐 Ruby 3.0+)
+2. 安装必要的依赖：
+   ```bash
+   # 安装 bundler
+   gem install bundler
+   
+   # 安装项目依赖
+   bundle install
+   
+   # 如果使用 Ruby 3.0+ 还需要安装 webrick
+   bundle add webrick
+   ```
+3. 本地运行网站：
+   ```bash
+   bundle exec jekyll serve
+   ```
+   网站将在 http://localhost:4000 运行
+
+### 2. 发布新博客
+
+#### 方法一：手动创建
+
+1. 在 `_posts` 目录下创建新的 markdown 文件，文件名格式为：`YYYY-MM-DD-文章标题.md`
+2. 在文件头部添加 Front Matter：
+   ```yaml
+   ---
+   title: "文章标题"
+   categories:
+     - 分类名称
+   tags:
+     - 标签1
+     - 标签2
+   ---
+   ```
+
+#### 方法二：使用命令行
+
+使用以下命令创建新文章：
+```bash
+bundle exec jekyll post "文章标题"
+```
+
+### 3. 文章格式说明
+
+1. 基本格式配置：
+   ```yaml
+   ---
+   title: "文章标题"
+   header:
+     teaser: "/assets/images/500x300.png" # 预览图
+   categories:
+     - 分类名称
+   tags:
+     - 标签
+   toc: true # 是否显示目录
+   ---
+   ```
+
+2. 添加图片：
+   - 将图片文件放在 `/assets/images/` 目录下
+   - 在文章中引用：`![图片描述](/assets/images/图片名称.jpg)`
+
+3. 代码块：
+   ```python
+   def hello():
+       print("Hello World")
+   ```
+
+### 4. 网站配置
+
+主要配置文件为 `_config.yml`，包含以下重要设置：
+
+- 网站基本信息
+- 主题外观
+- 评论系统
+- 社交媒体链接
+- 作者信息
+
+### 5. 目录结构
+```
+.
+├── _posts/    # 博客文章
+├── _pages/    # 独立页面
+├── _data/     # 网站数据文件
+├── assets/
+│   ├── images/  # 图片资源
+│   ├── css/     # 样式文件
+│   └── js/      # JavaScript文件
+└── _config.yml  # 配置文件
+```
+
+### 6. 常用功能
+
+1. 添加页面导航：
+   - 编辑 `_data/navigation.yml` 文件
+
+2. 自定义样式：
+   - 主题支持9种颜色方案，在 `_config.yml` 中设置 `minimal_mistakes_skin`
+
+3. 搜索功能：
+   - 默认启用，可在 `_config.yml` 中配置
+
+4. 评论系统：
+   - 支持多种评论系统，在 `_config.yml` 中配置
+
+## 注意事项
+
+1. 图片路径必须使用完整路径，例如：`/assets/images/filename.jpg`
+2. 本地预览时如遇到问题，请使用 `bundle exec jekyll serve --trace` 查看详细错误信息
+3. 确保文章的文件名和文件内容的日期信息一致
+4. 新添加的文章可能需要重启本地服务器才能看到更新
+
+## 帮助和支持
+
+- 如果遇到问题，可以：
+  1. 查看 [Jekyll 官方文档](https://jekyllrb.com/docs/)
+  2. 查看 [Minimal Mistakes 主题文档](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/)
+  3. 在 [Jekyll Talk](https://talk.jekyllrb.com/) 论坛寻求帮助

@@ -120,10 +120,10 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:你的邮箱@email.com"
-    - label: "Website"
+      url: "mailto:wsyhok@126.com"
+    - label: "CSDN"
       icon: "fas fa-fw fa-link"
-      # url: "https://你的网站.com"
+      url: "https://blog.csdn.net/wsyhok?type=blog"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
